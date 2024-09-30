@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/items/create', [ItemController::class, 'create'])->name('items.create');
+Route::get('/items/store', [ItemController::class, 'store'])->name('items.store');
